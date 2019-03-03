@@ -16,14 +16,14 @@ h1{
 }
 
 .header{
+  position: fixed;
   font-size: 24px;
   color: #FFFFFF;
   background-color:#007765;
   display: flex;
   justify-content: space-between;
   padding: 20px 55px 19px 54px;
-  position: fixed;
-  width: 100%;
+  width: 100%; /* лишние 7% почему?*/
 }
 
 .menu{
@@ -34,7 +34,6 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .block1{
@@ -42,6 +41,7 @@ h1{
   background: url('file:///Users/anna/Web/images/background1.png'); 
   background-size: contain;
   height: 403px;
+  margin-top: 84px;
 }
 
 .block1 h1{
