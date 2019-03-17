@@ -1,15 +1,15 @@
+*{
+box-sizing: border-box;
+}
+
 body{
-  width: 1219px;
   font-size: 32px;
   font-family: 'Roboto', sans-serif;
   color: #000000;
   background-color: #EEEEEE;
-  margin: 0;
-  width: 100%;
 }
 
-h1{
-  font-weight: normal;
+h2{
   font-size: 64px;
   text-align: center;
   color: #007765;
@@ -23,7 +23,12 @@ h1{
   display: flex;
   justify-content: space-between;
   padding: 20px 55px 19px 54px;
-  width: 100%; /* лишние 7% почему?*/
+  width: 100%; 
+}
+
+.header img{
+  width: 184px;
+  height: 45px;
 }
 
 .menu{
@@ -33,13 +38,12 @@ h1{
 .content{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .block1{
   display: flex;
-  background: url('file:///Users/anna/Web/images/background1.png'); 
-  background-size: contain;
+  background: url('/images/background1.png'); 
+  background-size: cover;
   height: 403px;
   margin-top: 84px;
 }
@@ -54,17 +58,21 @@ h1{
   padding: 48px 57px 92px 55px;
 }
 
+.block2 p{
+  padding-top: 16px;
+}
+
 .block3{
   display: flex;
-  background: url('file:///Users/anna/Web/images/background2.png'); 
-  background-size: contain;
+  background: url('/images/background2.png'); 
+  background-size: cover;
   height: 483px;
 }
 
 .block3 p{
   font-size: 48px;
   color: #FFFFFF;
-  margin: auto;
+  margin:auto;
   text-align: center;
 }
 
@@ -73,10 +81,11 @@ h1{
   background-color: #FFFFFF;
 }
 
-.logo_paragraph{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.logo_paragraph img{
+  float: left;
+  margin-right: 55px;
+  width: 115px;
+  height: 115px;
 }
 
 .block_team{
@@ -84,8 +93,10 @@ h1{
 }
 
 .block_team_foto{
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .member{
@@ -93,9 +104,15 @@ h1{
   margin-bottom:30px;
 }
 
-.block_team h1{
-  margin: auto;
-  padding: 0px 0px 56px 0px;
+.member h2{
+  text-align: center;
+  font-size: 24px;
+}
+
+.member span{
+  display: block;
+  font-style: italic;
+  font-size: 18px;
 }
 
 .block_team img{
@@ -122,4 +139,106 @@ h1{
   color: #FFFFFF;
   background-color: #333333;
   padding: 48px 0px 64px 0px;
+}
+
+.container{
+  max-width: 1219px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+
+  body{
+    font-size: 15px;
+  }
+  
+  h2{
+    font-size: 30px;
+  }
+  .header{
+    font-size: 10px;
+    padding: 18px 20px;
+  }
+
+.header img{
+  width: 100px;
+  height: 20px;
+}
+
+.block1{
+  height: 300px;
+  padding: 0px;
+  margin-top: 56px;
+
+}
+  
+  .block1 h1{
+    font-size: 30px;
+  }
+
+  .block2{
+    padding: 0px;
+  }
+
+  .block2 p{
+    padding-top: 0px;
+  }
+  
+  .block3{
+    height: 400px;
+    padding: 30px;
+  }
+  
+  .block3 p{
+    font-size: 24px;
+  }
+
+  .block4{
+    padding: 0px;
+  }
+
+  .logo_paragraph img{
+    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .block_team{
+    padding: 0px;
+  }
+  
+  .member{
+    flex: 50%;  
+    margin-bottom:30px;
+  }
+  
+  .member h2{
+    font-size: 12px;
+  }
+  
+  .member span{
+    font-size: 10px;
+  }
+  
+  .block_team img{
+    width: 100px;
+    height: 100px;
+  }
+  
+  .block_team p{
+    font-size: 10px;
+  }
+  
+  .block_team img + p {  /*переопределим для первого p*/
+    font-size: 12px;
+  } 
+  
+  .footer{
+    font-size: 10px;
+  }
+  
+  .container{
+    max-width: 600px;
+    padding: 20px 30px;
+    }
 }
